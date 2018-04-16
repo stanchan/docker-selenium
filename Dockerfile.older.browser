@@ -14,7 +14,7 @@ USER root
 RUN mkdir -p /home/seluser/chrome-deb \
   && cd /home/seluser/chrome-deb \
   && wget -O "older_chrome.deb" -nv \
-     "https://github.com/elgalu/docker-selenium/releases/download/3.3.1-p22/google-chrome-stable_60.0.3112.101_amd64.deb"
+     "https://github.com/stanchan/docker-selenium/releases/download/3.3.1-p22/google-chrome-stable_60.0.3112.101_amd64.deb"
 
 # Installing the deb file will upgrade replace existing Chrome with the one we need
 RUN cd /home/seluser/chrome-deb \

@@ -18,7 +18,7 @@ sudo chmod u+s /usr/local/bin/docker-machine-driver-xhyve || true
 # docker-machine stop default || true
 
 # Currently erroring:
-#  https://travis-ci.org/elgalu/docker-selenium/jobs/143358317
+#  https://travis-ci.org/stanchan/docker-selenium/jobs/143358317
 #   com.docker.docker Incompatible CPU detected
 #   Docker requires a processor with virtualization capabilities
 # /Applications/Docker.app/Contents/MacOS/Docker &

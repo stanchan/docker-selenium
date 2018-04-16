@@ -8,7 +8,7 @@ For requirements check [README#requisites](../README.md#requisites)
 ## Usage
 Either clone this repository or download the file [docker-compose-host.yml][] using `wget`
 
-    wget -nv "https://raw.githubusercontent.com/elgalu/docker-selenium/latest/docker-compose-host.yml"
+    wget -nv "https://raw.githubusercontent.com/stanchan/docker-selenium/latest/docker-compose-host.yml"
     mv -f docker-compose-host.yml docker-compose.yml
     docker-compose -p grid down #ensure is not already running
 

@@ -172,31 +172,31 @@ docker_login_tag_push() {
   docker login -u="${DOCKER_USERNAME}" -p="${DOCKER_PASSWORD}"
   echo "Logged in to docker with user '${DOCKER_USERNAME}'"
   echo "docker tag and docker push using TRAVIS_TAG=${TRAVIS_TAG}"
-  docker tag selenium:latest elgalu/selenium:${TRAVIS_TAG}
-  docker tag selenium:latest elgalu/selenium:latest
+  docker tag selenium:latest stanchan/selenium:${TRAVIS_TAG}
+  docker tag selenium:latest stanchan/selenium:latest
 
   # e.g. TAG_VERSION_MAJOR="3"
   TAG_VERSION_MAJOR="${TRAVIS_TAG::1}"
   echo "TAG_VERSION_MAJOR=${TAG_VERSION_MAJOR}"
-  docker tag selenium:latest elgalu/selenium:${TAG_VERSION_MAJOR}
+  docker tag selenium:latest stanchan/selenium:${TAG_VERSION_MAJOR}
   # e.g. TAG_VERSION_MAJ_MINOR="3.3"
   TAG_VERSION_MAJ_MINOR="${TRAVIS_TAG::3}"
   echo "TAG_VERSION_MAJ_MINOR=${TAG_VERSION_MAJ_MINOR}"
-  docker tag selenium:latest elgalu/selenium:${TAG_VERSION_MAJ_MINOR}
+  docker tag selenium:latest stanchan/selenium:${TAG_VERSION_MAJ_MINOR}
   # e.g. TAG_VERSION_MAJ_MIN_PATCH="3.3.1"
   TAG_VERSION_MAJ_MIN_PATCH="${TRAVIS_TAG::5}"
   echo "TAG_VERSION_MAJ_MIN_PATCH=${TAG_VERSION_MAJ_MIN_PATCH}"
-  docker tag selenium:latest elgalu/selenium:${TAG_VERSION_MAJ_MIN_PATCH}
+  docker tag selenium:latest stanchan/selenium:${TAG_VERSION_MAJ_MIN_PATCH}
 
   # Push this version with all the corresponding tags
-  docker push elgalu/selenium:${TAG_VERSION_MAJOR}
-  docker push elgalu/selenium:${TAG_VERSION_MAJ_MINOR}
-  docker push elgalu/selenium:${TAG_VERSION_MAJ_MIN_PATCH}
-  docker push elgalu/selenium:${TRAVIS_TAG} | tee docker_push.log
-  docker push elgalu/selenium:latest
+  docker push stanchan/selenium:${TAG_VERSION_MAJOR}
+  docker push stanchan/selenium:${TAG_VERSION_MAJ_MINOR}
+  docker push stanchan/selenium:${TAG_VERSION_MAJ_MIN_PATCH}
+  docker push stanchan/selenium:${TRAVIS_TAG} | tee docker_push.log
+  docker push stanchan/selenium:latest
 
   # Update Docker README.md badges
-  curl -XPOST "https://hooks.microbadger.com/images/elgalu/selenium/2blr1ujGSTcUtm3HnU0-h5m6yLY=" || true
+  curl -XPOST "https://hooks.microbadger.com/images/stanchan/selenium/2blr1ujGSTcUtm3HnU0-h5m6yLY=" || true
 }
 
 #############################
@@ -297,7 +297,7 @@ git_config() {
 git_co_fetch_merge_stash() {
   echo "update_changelog_and_git_tag::git_co_fetch_merge_stash"
   git checkout -b travis-${TRAVIS_BUILD_NUMBER}
-  git remote add github "https://elgalubot:${GITHUB_TOKEN}@github.com/elgalu/docker-selenium.git"
+  git remote add github "https://elgalubot:${GITHUB_TOKEN}@github.com/stanchan/docker-selenium.git"
   git fetch github
   # git stash save || true
   git checkout -t github/master -b github/master

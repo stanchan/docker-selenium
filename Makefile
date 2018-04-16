@@ -15,7 +15,7 @@ ifeq ($(OS),Windows_NT)
 $(error Windows is not currently supported)
 endif
 
-export GIT_BASE_URL ?= https://raw.githubusercontent.com/elgalu/docker-selenium
+export GIT_BASE_URL ?= https://raw.githubusercontent.com/stanchan/docker-selenium
 export GIT_TAG_OR_BRANCH ?= latest
 
 UNAME_S := $(shell uname -s)

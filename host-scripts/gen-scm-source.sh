@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 GIT_AUTHOR=lgallucci
-GIT_URL="https://github.com/elgalu/docker-selenium"
+GIT_URL="https://github.com/stanchan/docker-selenium"
 GIT_SHA1=$(git rev-parse HEAD)
 # Optional SCM working directory status information. Might contain git status output for example
 # GIT_STATUS=$(git describe --all)

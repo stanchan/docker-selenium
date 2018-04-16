@@ -2,11 +2,11 @@
 
 # Selenium in Docker with Chrome and Firefox
 
-[![Build Status](https://travis-ci.org/elgalu/docker-selenium.svg?branch=master)](https://travis-ci.org/elgalu/docker-selenium "Travis CI")
+[![Build Status](https://travis-ci.org/stanchan/docker-selenium.svg?branch=master)](https://travis-ci.org/stanchan/docker-selenium "Travis CI")
 [![Docker Pulls](https://img.shields.io/docker/pulls/elgalu/selenium.svg)](https://hub.docker.com/r/elgalu/selenium/tags/)
 [![Docker](https://images.microbadger.com/badges/version/elgalu/selenium.svg)](https://microbadger.com/images/elgalu/selenium "Docker Badge")
-[![Analytics](https://ga-beacon.appspot.com/UA-18144954-10/github/elgalu/docker-selenium/README.md)](https://github.com/igrigorik/ga-beacon "Analytics")
-[![Gitter](https://badges.gitter.im/elgalu/selenium.svg)](https://gitter.im/elgalu/docker-selenium "Chat support")
+[![Analytics](https://ga-beacon.appspot.com/UA-18144954-10/github/stanchan/docker-selenium/README.md)](https://github.com/igrigorik/ga-beacon "Analytics")
+[![Gitter](https://badges.gitter.im/elgalu/selenium.svg)](https://gitter.im/stanchan/docker-selenium "Chat support")
 
 * selenium server grid with 2 nodes (chrome & firefox)
 * mp4 video recording
@@ -16,7 +16,7 @@
 * google-chrome-unstable: no longer provided but [can still be found here][2.47.1m]
 * firefox stable latest
 * firefox stable [last 18 versions can be found here][2.47.1m]
-* fluxbox (openbox window manager can still be found [here](https://github.com/elgalu/docker-selenium/releases/tag/3.0.1c))
+* fluxbox (openbox window manager can still be found [here](https://github.com/stanchan/docker-selenium/releases/tag/3.0.1c))
 
 Selenium 3  `docker run ... elgalu/selenium:latest`
 ![docker-selenium-grid](./images/grid3_console.png)
@@ -122,14 +122,14 @@ If you want to limit yourself to this project, you still can. There are some way
         docker-compose -f docker-compose-tests.yml -p grid up --force-recreate
         docker-compose -f docker-compose-tests.yml -p grid scale mock=1 hub=1 chrome=3 firefox=3
 
-1. The _(not recommended)_ way is by increasing `MAX_INSTANCES` and `MAX_SESSIONS` which now [defaults](https://github.com/elgalu/docker-selenium/blob/2.53.1a/Dockerfile#L967) to 1.
+1. The _(not recommended)_ way is by increasing `MAX_INSTANCES` and `MAX_SESSIONS` which now [defaults](https://github.com/stanchan/docker-selenium/blob/2.53.1a/Dockerfile#L967) to 1.
 
         docker run -d --name=grid -p 4444:24444 -p 5900:25900 \
             -v /dev/shm:/dev/shm --privileged \
             -e MAX_INSTANCES=20 -e MAX_SESSIONS=20 \
             elgalu/selenium
 
-The drawback is that all tests will run on the same desktop meaning the video recording will only capture the browser in the foreground but it's in the roadmap to make all this transparent, see issues [#78](https://github.com/elgalu/docker-selenium/issues/78) and [#77](https://github.com/elgalu/docker-selenium/issues/77).
+The drawback is that all tests will run on the same desktop meaning the video recording will only capture the browser in the foreground but it's in the roadmap to make all this transparent, see issues [#78](https://github.com/stanchan/docker-selenium/issues/78) and [#77](https://github.com/stanchan/docker-selenium/issues/77).
 
 Another problem with increasing `MAX_INSTANCES` & `MAX_SESSIONS` is focus issues. So in this case is better scale up/down via [docker-compose](./docs/docker-compose.md).
 
@@ -438,11 +438,11 @@ See [SECURITY.md](./SECURITY.md)
 See [LICENSE.md](./LICENSE.md)
 
 <!-- links -->
-[2.47.1m]: https://github.com/elgalu/docker-selenium/releases/tag/2.47.1m
+[2.47.1m]: https://github.com/stanchan/docker-selenium/releases/tag/2.47.1m
 [Selenium]: https://github.com/SeleniumHQ/selenium
 [sauce]: https://saucelabs.com/selenium/selenium-grid
 [BrowserStack]: https://www.browserstack.com/automate
 [xvfb-electron]: http://electron.atom.io/docs/tutorial/testing-on-headless-ci
 [docker-compose.yml]: ./docker-compose.yml
-[releases]: https://github.com/elgalu/docker-selenium/releases/
+[releases]: https://github.com/stanchan/docker-selenium/releases/
 [Zalenium]: https://github.com/zalando/zalenium

@@ -7,7 +7,7 @@ version: '2.1'
 
 services:
   hub:
-    image: elgalu/selenium
+    image: stanchan/selenium
     ports:
       # Note 24444 is the default SELENIUM_HUB_PORT inside the container
       #  and  4444 will be mapped into your host for easy access.
@@ -31,7 +31,7 @@ services:
       - MOCK_SERVER_HOST=mock
 
   chrome:
-    image: elgalu/selenium
+    image: stanchan/selenium
     depends_on:
       - hub
     volumes:
@@ -52,7 +52,7 @@ services:
       - FIREFOX=false
 
   firefox:
-    image: elgalu/selenium
+    image: stanchan/selenium
     depends_on:
       - hub
     volumes:
@@ -73,7 +73,7 @@ services:
       - FIREFOX=true
 
   mock:
-    image: elgalu/google_adwords_mock
+    image: stanchan/google_adwords_mock
     depends_on:
       - hub
     tty: true

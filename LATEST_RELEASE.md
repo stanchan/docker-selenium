@@ -1,5 +1,5 @@
 ## 3.11.0-p6
- + **Changes:** https://github.com/elgalu/docker-selenium/compare/3.11.0-p5...3.11.0-p6 (2018-04-09)
+ + **Changes:** https://github.com/stanchan/docker-selenium/compare/3.11.0-p5...3.11.0-p6 (2018-04-09)
     + Diego Molina (1):
         * [e083d54] Update GeckoDriver to v0.20.1
  + **Image tag details:**

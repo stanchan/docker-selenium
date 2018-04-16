@@ -4,7 +4,7 @@ Please make sure that the boxes below are checked before you submit your issue. 
 - [ ] I provided my operating system name and version, e.g. output of `uname -a`
 
 #### Image version
-- [ ] I have latest version of this image. Upgrade with `docker pull elgalu/selenium`
+- [ ] I have latest version of this image. Upgrade with `docker pull stanchan/selenium`
 
 - [ ] If I don't have latest version of this image and can't upgrade, I will specify which one I'm using.
 

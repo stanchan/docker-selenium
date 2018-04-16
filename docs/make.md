@@ -60,7 +60,7 @@ But given the upgrades are destructive is better to git clone this repository an
 If you make changes to these config files locally git will advise how to merge latest changes and you will be safe of losing your customizations.
 
 ### Git setup
-    git clone https://github.com/elgalu/docker-selenium.git
+    git clone https://github.com/stanchan/docker-selenium.git
 
 ### Git upgrades
     git pull

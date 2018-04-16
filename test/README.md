@@ -47,4 +47,4 @@ Sample output
 
 
 [selenium-test-dockerized]: https://github.com/elgalu/selenium-test-dockerized
-[docker-selenium]: https://github.com/elgalu/docker-selenium
+[docker-selenium]: https://github.com/stanchan/docker-selenium

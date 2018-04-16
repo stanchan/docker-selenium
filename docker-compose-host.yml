@@ -2,7 +2,7 @@ version: '2.1'
 
 services:
   hub:
-    image: elgalu/selenium
+    image: stanchan/selenium
     network_mode: host
     volumes:
       - /dev/shm:/dev/shm
@@ -15,7 +15,7 @@ services:
       - FIREFOX=false
 
   chrome:
-    image: elgalu/selenium
+    image: stanchan/selenium
     network_mode: host
     volumes:
       - /dev/shm:/dev/shm
@@ -28,7 +28,7 @@ services:
       - FIREFOX=false
 
   firefox:
-    image: elgalu/selenium
+    image: stanchan/selenium
     network_mode: host
     volumes:
       - /dev/shm:/dev/shm
@@ -41,7 +41,7 @@ services:
       - FIREFOX=true
 
   mock:
-    image: elgalu/google_adwords_mock
+    image: stanchan/google_adwords_mock
     network_mode: host
     tty: true
     environment:

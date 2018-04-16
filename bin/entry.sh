@@ -124,7 +124,7 @@ if [ "${USE_SELENIUM}" == "2" ]; then
   echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
   echo "!!! WARNING!!! You are using the unmaintained Selenium 2 !!!"
   echo "!!! to continue using Selenium 2 please use the proper tag:"
-  echo "!!! docker pull elgalu/selenium:2                        !!!"
+  echo "!!! docker pull stanchan/selenium:2                        !!!"
   echo "!!!                                                      !!!"
   echo "!!! Will start with Selenium 3 anyway                    !!!"
   echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
@@ -470,7 +470,7 @@ fi
 #-------------------------------
 # Fix small tiny 64mb shm issue
 #-------------------------------
-# https://github.com/elgalu/docker-selenium/issues/20
+# https://github.com/stanchan/docker-selenium/issues/20
 if [ "${SHM_TRY_MOUNT_UNMOUNT}" = "true" ] && [ "${WE_HAVE_SUDO_ACCESS}" == "true" ]; then
   sudo umount /dev/shm || true
   sudo mount -t tmpfs -o rw,nosuid,nodev,noexec,relatime,size=${SHM_SIZE} \

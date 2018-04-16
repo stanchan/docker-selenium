@@ -719,7 +719,7 @@ ENV DEFAULT_SELENIUM_HUB_PORT="24444" \
     DEFAULT_SUPERVISOR_HTTP_PORT="19001"
 
 # Commented for now; all these versions are still available at
-#   https://github.com/elgalu/docker-selenium/releases/tag/2.47.1m
+#   https://github.com/stanchan/docker-selenium/releases/tag/2.47.1m
 # CHROME_FLAVOR "stable"
 #   Default chrome flavor, options no longer available: beta|unstable
 # PICK_ALL_RANDOM_PORTS "true" / "false"
@@ -969,7 +969,7 @@ ENV FIREFOX_VERSION="${FF_VER}" \
   DOCKER_SOCK="/var/run/docker.sock" \
   TEST_SLEEPS="0.1" \
   ZALENIUM="false" \
-  SEND_ANONYMOUS_USAGE_INFO="true" \
+  SEND_ANONYMOUS_USAGE_INFO="false" \
   GA_TRACKING_ID="UA-18144954-9" \
   GA_ENDPOINT=https://www.google-analytics.com/collect \
   GA_API_VERSION="1" \

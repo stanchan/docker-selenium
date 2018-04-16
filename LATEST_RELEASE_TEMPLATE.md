@@ -1,5 +1,5 @@
 ## NEXT_RELEASE
- + **Changes:** https://github.com/elgalu/docker-selenium/compare/PREV_RELEASE...NEXT_RELEASE (TBD_DATE)
+ + **Changes:** https://github.com/stanchan/docker-selenium/compare/PREV_RELEASE...NEXT_RELEASE (TBD_DATE)
  + **Image tag details:**
     + Selenium version: TBD_SELENIUM_VERSION (TBD_SELENIUM_REVISION)
     + Chrome stable:  TBD_CHROME_STABLE

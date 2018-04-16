@@ -21,7 +21,7 @@ Add ` -- bash` at the end to run an arbitrary command.
     #=>        map[waiting:map[reason:ContainerCreating]]
     #=>        map[running:map[startedAt:2017-10-09T11:46:53Z]]
     #=> e.g. failed:
-    #=>        map[waiting:map[reason:ImagePullBackOff message:Back-off pulling image "elgalu/docker-selenium"]]
+    #=>        map[waiting:map[reason:ImagePullBackOff message:Back-off pulling image "stanchan/docker-selenium"]]
 
 #### K8s get pod name
     POD_NAME=$(zkubectl get pod -l "run=dosel" -o "jsonpath={.items..metadata.name}")
@@ -39,8 +39,8 @@ Add ` -- bash` at the end to run an arbitrary command.
 #### K8s events to understand reason of failure
 
     zkubectl describe pods dosel
-    #=> Failed to pull image "elgalu/docker-selenium": rpc error: code = 2 desc =
-    #=> Error: image elgalu/docker-selenium:latest not found
+    #=> Failed to pull image "stanchan/docker-selenium": rpc error: code = 2 desc =
+    #=> Error: image stanchan/docker-selenium:latest not found
 
 #### K8s Delete
 Using `all` is handy but in this case `deployment` should also be enough as deleting the deployment will also delete the pod
@@ -148,7 +148,7 @@ However adding a custom host IP to server-selenium.local (e.g. bsele ssh config)
     docker run --rm --name=ff -p=0.0.0.0:4471:24444 -p=0.0.0.0:5921:25900 selenium
 
 Automatic builds not working for me right now, maybe there is an issue with docker registry v1 vs v2
-https://registry.hub.docker.com/u/elgalu/docker-selenium/builds_history/31621/
+https://registry.hub.docker.com/u/stanchan/docker-selenium/builds_history/31621/
 
 ## Pulling
 
@@ -284,7 +284,7 @@ reported to be fixed with --disable-impl-side-painting:
   https://code.google.com/p/chromedriver/issues/detail?id=732#c19
 
 Protractor config example
-Update: doesn't fix the issue, see: https://github.com/elgalu/docker-selenium/issues/20
+Update: doesn't fix the issue, see: https://github.com/stanchan/docker-selenium/issues/20
 
     capabilities: {
         browserName: 'chrome',
